@@ -86,7 +86,6 @@ $resultado = mysqli_query($conn, $sql);
         td { 
             padding: 20px; 
             vertical-align: middle;
-            /* LINHAS DOS QUADRADOS MAIS FORTES */
             border-top: 2px solid #D7C4B0; 
             border-bottom: 2px solid #D7C4B0; 
         }

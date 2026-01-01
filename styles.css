@@ -1,11 +1,11 @@
-/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* FORÇANDO FUNDO EM TODAS AS CAMADAS E NO TOPO */
+
 html, body, main, .container, .secao-produtos, #mais-vendidos, #lancamentos, section, 
 .header-principal, .categorias-container, .header-container, .categorias-lista {
     background-color: #ebe2d3 !important;
@@ -64,7 +64,7 @@ header {
     /* Espaço entre o botão '...' e a logo */
 }
 
-/* --- BOTÃO MENU LATERAL (TRÊS TRACINHOS) --- */
+
 .menu-toggle {
     cursor: pointer;
     display: flex;
@@ -435,9 +435,7 @@ header {
     width: 100% !important;
     height: 42px !important;
     /* Altura fixa para todos */
-
     padding: 0 !important;
-    /* Removemos o padding para a altura mandar */
     border-radius: 4px !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
@@ -464,7 +462,6 @@ header {
 
 }
 
-/* --- RODAPÉ --- */
 .rodape-profissional {
     background-color: #0d112b;
     /* Cor azul escura do seu print */
@@ -494,8 +491,6 @@ header {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
-/* AJUSTE DA LOGO NO RODAPÉ (LÁ EMBAIXO) */
 .logo-footer {
     width: 150px !important;
     /* Ajuste esse valor para o tamanho que você preferir */
@@ -517,8 +512,6 @@ header {
     line-height: 1.5;
     margin-bottom: 5px;
 }
-
-/* --- SEÇÃO CUIDADOS COM A PRATA --- */
 .secao-cuidados {
     padding: 60px 20px;
     background-color: #fff;
@@ -694,7 +687,6 @@ header {
 
 .produto-info .preco {
     font-size: 22px !important;
-    /* Estava muito grande, 22px fica elegante */
     font-weight: bold;
     margin-top: 10px;
     display: block;
@@ -709,14 +701,12 @@ header {
     align-items: center !important;
     gap: 8px !important;
     background-color: #346445 !important;
-    /* Cor padrão do WhatsApp */
     color: #fff !important;
     text-decoration: none !important;
     border-radius: 5px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
 
-    /* A MÁGICA DA ANIMAÇÃO AQUI */
     transition: all 0.3s ease-in-out !important;
 }
 
@@ -782,7 +772,7 @@ header {
 
 
 /* ============================================================
-   CONFIGURAÇÃO ESPECIAL PARA CELULAR (DIDI PRATAS) - UNIFICADO
+  PARA CELULAR (DIDI PRATAS) 
    ============================================================ */
 
 @media (max-width: 768px) {
@@ -955,7 +945,7 @@ header {
     }
 
     /* 6. SEÇÃO DE CUIDADOS (2 por linha) */
-/* Força os cuidados a ficarem em linha novamente */
+
     .grid-cuidados {
         display: flex !important;
         flex-direction: row !important; /* VOLTA PARA LINHA */

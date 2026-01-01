@@ -18,13 +18,13 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM produtos WHERE id = '$id'";
 
     if (mysqli_query($conn, $sql)) {
-        // Se deu certo, volta para o painel com uma mensagem de sucesso
+       
         header("Location: painel.php?msg=excluido");
     } else {
         echo "Erro ao excluir: " . mysqli_error($conn);
     }
 } else {
-    // Se tentarem acessar o arquivo sem um ID, volta para o painel
+    
     header("Location: painel.php");
 }
 ?>

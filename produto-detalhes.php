@@ -87,13 +87,12 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
         .produto-imagem-foco img {
             width: 100%;
             max-width: 400px;
-            /* Reduzido de 550px para 400px para ficar mais delicado */
             border-radius: 4px;
         }
 
         .produto-info {
             flex: 1.2;
-            /* Damos mais espaço para o texto respirar */
+            
         }
 
         /* Aumentando a descrição e textos laterais no PC */
@@ -145,7 +144,7 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
             gap: 12px;
         }
 
-        /* SEÇÃO SEMELHANTES - MAIOR NO PC */
+        /* SEÇÃO SEMELHANTES - */
         .secao-semelhantes {
             max-width: 1150px;
             margin: 100px auto;
@@ -155,7 +154,6 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
         .titulo-semelhantes {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
-            /* Frase "Você também pode gostar" bem maior */
             text-align: center;
             margin-bottom: 50px;
             color: #111;

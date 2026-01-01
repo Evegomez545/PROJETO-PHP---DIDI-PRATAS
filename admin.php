@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// CONFIGURAÇÃO DE ACESSO (MANTIDA CONFORME SEU PEDIDO)
+
 $usuario_mestre = "didi";
 $senha_mestre = "271188"; 
 
@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             align-items: center;
             height: 100vh;
             margin: 0;
-            /* NOVO VISUAL: Gradiente igual ao da imagem que você gostou */
             background: linear-gradient(135deg, #360d34ff 0%, #940439ff 100%);
         }
 
@@ -48,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: white;
         }
 
-        /* Ícone circular do topo conforme sua imagem */
+        
         .user-icon {
             font-size: 50px;
             border: 2px solid rgba(255,255,255,0.5);
@@ -67,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-bottom: 15px;
         }
 
-        /* Ícones dentro dos campos */
+        
         .input-group i {
             position: absolute;
             left: 15px;
@@ -81,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%;
             padding: 15px 15px 15px 50px; /* Espaço para o ícone */
             border: none;
-            border-radius: 8px; /* Arredondado conforme você pediu */
+            border-radius: 8px; 
             background: #e0e0e0;
             font-size: 16px;
             outline: none;
@@ -90,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         button {
             width: 100%;
-            background-color: #ff2d55; /* Cor rosa/vinho da sua referência */
+            background-color: #ff2d55; 
             color: white;
             padding: 15px;
             border: none;

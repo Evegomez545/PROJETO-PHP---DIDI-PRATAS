@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "didipratas_db"; // Mude para este nome exato!
+$db   = "didipratas_db"; 
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

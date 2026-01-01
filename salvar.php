@@ -7,14 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $estoque = $_POST['estoque'];
     $imagem = $_POST['imagem'];
     $descricacao = $_POST['desc'];
-    
-    // Novas variáveis para as novas colunas
     $tipo = $_POST['tipo'];
     $estilo = $_POST['estilo'];
     $lancamentos = $_POST['lançamentos'];
     $mais_vendidos = $_POST['mais-vendidos'];
 
-    // Comando SQL atualizado com as novas colunas do seu banco
+    
     $sql = "INSERT INTO produtos (nome, preco, estoque, imagem, descricao, tipo, estilo, lançamentos, `mais-vendidos`) 
             VALUES ('$nome', '$preco', '$estoque', '$imagem', '$descricacao', '$tipo', '$estilo', '$lançamentos', '$mais_vendidos')";
 

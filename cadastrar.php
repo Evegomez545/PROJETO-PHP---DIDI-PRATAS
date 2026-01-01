@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Conexão incluída (certifique-se que o arquivo existe)
+
 include('conexao.php'); 
 
 if (!isset($_SESSION['logado'])) { 
