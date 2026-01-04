@@ -55,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <style>
         body { 
             font-family: 'Segoe UI', sans-serif; 
-            /* FUNDO ALGODÃO EGÍPCIO REFORÇADO */
             background-color: #E8DCCB; 
             margin: 0; 
             padding: 20px; 
@@ -71,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background: #FAF9F6; 
             padding: 30px; 
             border-radius: 20px; 
-            /* BORDA REFORÇADA PARA COMBINAR COM O PAINEL */
             border: 2px solid #D7C4B0;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
         }
@@ -96,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%; 
             padding: 12px; 
             margin-bottom: 15px; 
-            border: 2px solid #D7C4B0; /* LINHAS DOS QUADRADOS MAIS FORTES */
+            border: 2px solid #D7C4B0; 
             border-radius: 12px; 
             box-sizing: border-box; 
             background: white;
@@ -119,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-radius: 10px; 
         }
 
-        /* Botão Rosa Destaque */
+        
         button { 
             width: 100%; 
             padding: 15px; 
@@ -148,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             font-size: 14px;
         }
 
-        /* Ajuste para telas pequenas */
+      
         @media (max-width: 600px) {
             .flex-row { flex-direction: column; gap: 0; }
             .form-container { padding: 20px; }

@@ -73,7 +73,7 @@ $estilo_filtro = isset($_GET['estilo']) ? $_GET['estilo'] : '';
         <div id="todos-os-produtos"></div>
 
         <?php
-        // --- MAIS VENDIDOS ---
+        // MAIS VENDIDOS 
         if ($estilo_filtro == '' || $estilo_filtro == 'All'):
             $q_venda = "SELECT * FROM produtos WHERE `mais-vendidos` = 'sim' ORDER BY id DESC LIMIT 4";
             $res_venda = mysqli_query($conn, $q_venda);
@@ -108,7 +108,7 @@ $estilo_filtro = isset($_GET['estilo']) ? $_GET['estilo'] : '';
         endif; ?>
 
         <?php
-        // --- 1. BLOCO DE LANÇAMENTOS ---
+        // BLOCO DE LANÇAMENTOS 
         $ids_exibidos = [];
         $q_novidades = ($estilo_filtro != '' && $estilo_filtro != 'All') 
             ? "SELECT * FROM produtos WHERE lançamentos = 'sim' AND estilo = '$estilo_filtro' ORDER BY id DESC"
@@ -146,7 +146,7 @@ $estilo_filtro = isset($_GET['estilo']) ? $_GET['estilo'] : '';
         <?php endif; ?>
 
         <?php
-        // --- 2. BLOCO AUTOMÁTICO PARA AS OUTRAS CATEGORIAS ---
+        //  2 BLOCO AUTOMÁTICO PARA AS OUTRAS CATEGORIAS 
         $lista_excluir = !empty($ids_exibidos) ? implode(',', $ids_exibidos) : '0';
         $categorias = [
             ['id' => 'aneis', 'titulo' => 'Anéis em Prata 925', 'tipo' => 'Anéis'],

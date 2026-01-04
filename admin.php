@@ -3,7 +3,7 @@ session_start();
 
 
 $usuario_mestre = "didi";
-$senha_mestre = "271188"; 
+$senha_mestre = ""; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $_POST['usuario'];
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         input {
             width: 100%;
-            padding: 15px 15px 15px 50px; /* Espaço para o ícone */
+            padding: 15px 15px 15px 50px; 
             border: none;
             border-radius: 8px; 
             background: #e0e0e0;

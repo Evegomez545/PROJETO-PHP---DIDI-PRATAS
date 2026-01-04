@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $imagemNome = $_FILES['imagem']['name'];
     move_uploaded_file($_FILES['imagem']['tmp_name'], "img/" . $imagemNome);
 
-    // SQL corrigido com aspas simples para os valores
+   
     $sql = "INSERT INTO produtos (nome, preco, estoque, tipo, estilo, `mais-vendidos`, lançamentos, descricao, imagem) 
             VALUES ('$nome', '$preco', '$quantidade', '$tipo', '$estilo', '$mais_vendido', '$lancamento', '$descricao', '$imagemNome')";
     
@@ -57,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background: #FAF9F6; 
             padding: 30px; 
             border-radius: 20px; 
-            /* BORDA REFORÇADA IGUAL AO PAINEL */
             border: 2px solid #D7C4B0;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
         }
@@ -101,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             gap: 15px; 
         }
 
-        /* Botão estilizado */
+       
         button { 
             width: 100%; 
             padding: 15px; 
@@ -132,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             font-weight: 500;
         }
 
-        /* Ajuste para celular */
+        
         @media (max-width: 600px) {
             .flex-row { flex-direction: column; gap: 0; }
             .form-container { padding: 20px; border-radius: 15px; }

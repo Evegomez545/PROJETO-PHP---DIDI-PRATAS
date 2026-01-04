@@ -30,7 +30,7 @@ $resultado = mysqli_query($conn, $sql);
         .container { 
             max-width: 1100px; 
             margin: auto; 
-            background: #FAF9F6; /* Off-white para contrastar com o bege do fundo */
+            background: #FAF9F6; 
             padding: 30px; 
             border-radius: 20px; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -56,7 +56,7 @@ $resultado = mysqli_query($conn, $sql);
             width: 100%;
             padding: 12px 15px 12px 45px;
             border-radius: 25px;
-            border: 2px solid #D7C4B0; /* Borda da busca combinando */
+            border: 2px solid #D7C4B0; 
             outline: none;
             background: white;
         }
@@ -68,7 +68,7 @@ $resultado = mysqli_query($conn, $sql);
             color: #A69B91;
         }
 
-        /* TABELA COM ESPAÇAMENTO PARA OS QUADRADOS */
+       
         table { 
             width: 100%; 
             border-collapse: separate; 
@@ -77,7 +77,7 @@ $resultado = mysqli_query($conn, $sql);
         
         th { color: #8D6E63; text-align: left; padding: 0 20px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* O "QUADRADINHO" REFORÇADO */
+    
         tbody tr { 
             background: white;
             transition: 0.3s;
@@ -90,7 +90,7 @@ $resultado = mysqli_query($conn, $sql);
             border-bottom: 2px solid #D7C4B0; 
         }
 
-        /* Fechamento lateral dos quadrados */
+        
         td:first-child { 
             border-left: 2px solid #D7C4B0; 
             border-radius: 15px 0 0 15px; 

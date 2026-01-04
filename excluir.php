@@ -1,5 +1,5 @@
 <?php
-// 1. INICIA A SESSÃO E VERIFICA A SEGURANÇA
+// INICIA A SESSÃO E VERIFICA A SEGURANÇA
 session_start();
 
 if (!isset($_SESSION['logado'])) { 
@@ -7,14 +7,14 @@ if (!isset($_SESSION['logado'])) {
     exit; 
 }
 
-// 2. CONECTA AO BANCO DE DADOS
+// CONECTA AO BANCO DE DADOS
 require('conexao.php');
 
-// 3. PEGA O ID QUE VEIO PELO BOTÃO DA LIXEIRA NO PAINEL
+// PEGA O ID QUE VEIO PELO BOTÃO DA LIXEIRA NO PAINEL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // 4. COMANDO PARA APAGAR O PRODUTO ESPECÍFICO
+    // COMANDO PARA APAGAR O PRODUTO ESPECÍFICO
     $sql = "DELETE FROM produtos WHERE id = '$id'";
 
     if (mysqli_query($conn, $sql)) {

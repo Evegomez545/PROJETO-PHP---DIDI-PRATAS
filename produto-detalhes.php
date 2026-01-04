@@ -1,7 +1,7 @@
 <?php
 include('conexao.php');
 
-// 1. Pega o ID da URL. Se não tiver ID, volta para a vitrine
+
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 
 if (!$id) {
@@ -9,18 +9,16 @@ if (!$id) {
     exit;
 }
 
-// 2. Busca os dados reais no banco
 $query = "SELECT * FROM produtos WHERE id = '$id'";
 $resultado = mysqli_query($conn, $query);
 $produto = mysqli_fetch_assoc($resultado);
 
-// Se o ID não existir no banco, volta para a vitrine
+
 if (!$produto) {
     header("Location: index.php");
     exit;
 }
 
-// 3. Configura o WhatsApp
 $numeroDidi = "5521981404612";
 $precoFormatado = number_format($produto['preco'], 2, ',', '.');
 $mensagem = "Olá Didi Pratas! Gostaria de mais informações sobre: " . $produto['nome'] . " (R$ " . $precoFormatado . ")";
@@ -54,7 +52,7 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
 
         /* --- AJUSTES APENAS PARA COMPUTADOR --- */
 
-        /* Voltar mais visível */
+    
         .voltar-container {
             padding: 25px 40px;
         }
@@ -80,7 +78,6 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
         /* --- AJUSTE NA IMAGEM PARA COMPUTADOR --- */
         .produto-imagem-foco {
             flex: 0.8;
-            /* a proporção da coluna da imagem */
             text-align: center;
         }
 
@@ -95,7 +92,6 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
             
         }
 
-        /* Aumentando a descrição e textos laterais no PC */
         .material-tag {
             color: var(--dourado);
             font-size: 0.8rem;
@@ -121,7 +117,6 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
             margin: 20px 0;
         }
 
-        /* Descrição maior e mais legível no PC */
         .descricao {
             font-size: 1.1rem;
             color: var(--suave);
@@ -144,7 +139,7 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
             gap: 12px;
         }
 
-        /* SEÇÃO SEMELHANTES - */
+        /* SEÇÃO SEMELHANTES  */
         .secao-semelhantes {
             max-width: 1150px;
             margin: 100px auto;
@@ -160,7 +155,6 @@ $linkFinal = "https://wa.me/" . $numeroDidi . "?text=" . urlencode($mensagem);
             font-weight: 500;
         }
 
-        /* Ajuste dos textos dos cards abaixo da foto no PC */
         .card-prata h3 {
             font-size: 1.1rem !important;
             margin: 15px 0 8px !important;
