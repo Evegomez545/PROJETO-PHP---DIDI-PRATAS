@@ -1,45 +1,45 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-html, body, main, .container, .secao-produtos, #mais-vendidos, #lancamentos, section, 
-.header-principal, .categorias-container, .header-container, .categorias-lista {
+html,
+body,
+main,
+.container,
+.secao-produtos,
+#mais-vendidos,
+#lancamentos,
+section,
+.header-principal,
+.categorias-container,
+.header-container,
+.categorias-lista {
     background-color: #ebe2d3 !important;
 }
 
-/* GARANTINDO QUE OS CARDS FIQUEM BRANCOS SOBRE O FUNDO BEGE */
-.card-prata, .card-cuidado {
+.card-prata,
+.card-cuidado {
     background-color: #FFFFFF !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
-}
-
-
-/* GARANTINDO QUE OS CARDS FIQUEM BRANCOS SOBRE O FUNDO BEGE */
-.card-prata, .card-cuidado {
-    background-color: #FFFFFF !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 html {
     scroll-behavior: smooth;
-    /* Faz a tela deslizar suavemente ao clicar nos links */
 }
 
 body {
-    background-color: #F7F2E8 !important; /* Cor Algodão Egípcio */
+    background-color: #ebe2d3 !important;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
-/* --- HEADER PROFISSIONAL (LOGO NO CANTO) --- */
 header {
     background: #ffffff;
     padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -49,11 +49,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    /* Coloca logo e menu lado a lado */
     justify-content: space-between;
-    /* Logo na esquerda, links na direita */
     align-items: center;
-    /* Alinha verticalmente no centro */
     padding: 0 20px;
 }
 
@@ -61,27 +58,21 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Espaço entre o botão '...' e a logo */
 }
-
 
 .menu-toggle {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /* Espaço entre os tracinhos */
     padding: 10px;
     transition: 0.3s;
 }
 
 .menu-toggle span {
     width: 25px;
-    /* Largura do traço */
     height: 3px;
-    /* Espessura do traço */
     background-color: #3b1e54 !important;
-    /* ROXO DIDI PRATAS */
     display: block;
     border-radius: 2px;
     transition: 0.3s;
@@ -92,16 +83,12 @@ header {
     transform: scale(1.1);
 }
 
-
-/* AJUSTE DA LOGO NO CANTO */
 .logo-img img {
     width: 160px !important;
-    /* Tamanho elegante para o canto */
     height: auto !important;
     display: block;
 }
 
-/* MENU FIXO NO TOPO (HOME, PRODUTOS, CONTATOS) */
 .menu-fixo ul {
     list-style: none;
     display: flex;
@@ -114,39 +101,32 @@ header {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 1px;
-
 }
 
 .menu-fixo ul li a:hover {
     color: #b59b5d;
-    /* Dourado ao passar o mouse */
 }
 
-/* --- MENU LATERAL (SIDEBAR) --- */
 .sidebar {
     position: fixed;
     top: 0;
     left: -300px;
-    /* Começa escondido à esquerda */
     width: 280px;
     height: 100%;
     background: #fff;
     z-index: 2000;
     transition: 0.4s;
     padding: 30px;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.active {
     left: 0;
-    /* Aparece ao clicar no botão */
 }
 
 .close-menu {
     font-size: 30px;
     text-align: right;
     cursor: pointer;
-
 }
 
 .titulo-menu {
@@ -163,7 +143,7 @@ header {
 
 .sidebar ul li {
     padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: none;
 }
 
 .sidebar ul li a {
@@ -174,17 +154,13 @@ header {
     display: block;
 }
 
-
 .banner-principal {
     width: 100%;
     height: 500px;
-    /* Altura ideal para fotos mais verticais não estourarem */
     background-image: url('img/banner-principal.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* Preenche o espaço mantendo a proporção */
     background-position: center 20%;
-    /* Foca na parte de cima onde estão os produtos */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -193,22 +169,11 @@ header {
     position: relative;
     overflow: hidden;
     animation: zoomBanner 15s infinite alternate ease-in-out;
-
 }
 
-
 @keyframes zoomBanner {
-    0% {
-        background-size: 100%;
-        background-position: center 20%;
-    }
-
-    100% {
-        background-size: 110%;
-        /* Aumenta levemente a imagem */
-        background-position: center 25%;
-        /* Move um pouquinho para dar profundidade */
-    }
+    0% { background-size: 100%; background-position: center 20%; }
+    100% { background-size: 110%; background-position: center 25%; }
 }
 
 .banner-principal::before {
@@ -262,7 +227,6 @@ header {
     transform: scale(1.05);
 }
 
-/* --- GRID DE PRODUTOS --- */
 .secao-produtos {
     padding: 20px 0;
     max-width: 1200px;
@@ -272,13 +236,11 @@ header {
 
 .titulo-secao {
     font-family: 'Playfair Display', serif;
-    /* A fonte elegante */
     font-size: 32px;
     color: #333;
     text-align: center;
     margin-bottom: 40px;
     text-transform: none;
-    /* Mantém letras maiúsculas e minúsculas para ficar mais chic */
     letter-spacing: 1px;
 }
 
@@ -289,25 +251,21 @@ header {
     overflow-y: hidden !important;
     gap: 15px !important;
     padding: 20px 15px !important;
-    /* Respiro lateral para o card não colar na borda */
     width: 100% !important;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Isso garante que uma seção nunca encoste na outra verticalmente */
 .secao-produtos {
     padding: 40px 0;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid #f9f9f9;
-    /* Uma linha quase invisível para separar categorias */
+    border-bottom: none;
 }
 
 .grid-produtos::-webkit-scrollbar {
     height: 8px !important;
     display: block !important;
-    /* Mude para 'none' depois que testar e gostar */
 }
 
 .grid-produtos::-webkit-scrollbar-thumb {
@@ -315,11 +273,8 @@ header {
     border-radius: 10px !important;
 }
 
-
-
 .card-prata {
     flex: 0 0 calc(33.333% - 20px) !important;
-    /* Define exatamente 3 itens e um pouco do 4º */
     min-width: calc(33.333% - 20px) !important;
     max-width: calc(33.333% - 20px) !important;
     background: #fff;
@@ -328,94 +283,57 @@ header {
     flex-direction: column !important;
     align-items: center !important;
     scroll-snap-align: start !important;
-    border: 1px solid #e0d5c1 !important;
-    /* Linha Bege suave */
-    border: 2px solid #d4c5a9 !important;
-    /* Aumentei para 2px e escureci o bege */
+    border: none !important;
     border-radius: 12px !important;
-    /* Arredondei um pouco mais para ficar moderno */
     transition: all 0.3s ease !important;
 }
 
 .card-prata:hover {
-    border-color: #b59b5d !important;
-    /* A borda fica dourada no hover */
-    box-shadow: 0 4px 15px rgba(181, 155, 93, 0.1) !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
     transform: translateY(-5px) !important;
 }
 
-/* Seleciona o título dentro do card */
 .card-prata h3 {
     min-height: 3em;
-    /* Reserva espaço para até 2 ou 3 linhas */
     display: flex;
-    /* Ajuda a alinhar o texto */
     align-items: center;
-    /* Centraliza o texto verticalmente no espaço reservado */
     justify-content: center;
     margin-bottom: 15px;
-    /* Espaço entre o nome e o preço */
     font-size: 1.1rem;
-    /* Ajuste conforme o seu gosto */
     text-align: center;
 }
 
 .status-estoque {
     margin-top: 15px;
-    /* Espaço abaixo do botão */
     font-size: 12px;
     color: #524880;
-    /* Cor do texto */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    /* COMANDOS DE CENTRALIZAÇÃO */
     display: flex;
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Alinha ícone e texto verticalmente */
     width: 100%;
-    /* Ocupa toda a largura do card */
     gap: 8px;
-    /* Espaço entre o ícone e o texto */
-
     opacity: 0.9;
     text-align: center;
-}
-
-.status-estoque i {
-    margin: 0;
-    /* Remove qualquer margem que possa desalinhá-lo */
-}
-
-.card-prata:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .img-container {
     width: 100%;
     height: 300px;
-    /* Escolha uma altura fixa (ex: 250px ou 300px) */
     overflow: hidden;
-    /* Corta o que sobrar */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9f9f9;
-    /* Fundo neutro caso a foto seja menor */
+    background-color: transparent;
 }
-
 
 .img-container img {
     width: 100%;
     height: 100%;
-    /* A mágica acontece aqui: */
     object-fit: cover;
-    /* O 'cover' faz a foto preencher o espaço sem distorcer, 
-       cortando levemente as bordas se necessário, como no Instagram */
 }
 
 .preco {
@@ -426,7 +344,6 @@ header {
     margin-bottom: 15px;
 }
 
-/* Isso padroniza TODOS os botões do card */
 .btn-comprar,
 .btn-esgotado {
     display: inline-flex !important;
@@ -434,7 +351,6 @@ header {
     justify-content: center !important;
     width: 100% !important;
     height: 42px !important;
-    /* Altura fixa para todos */
     padding: 0 !important;
     border-radius: 4px !important;
     font-weight: bold !important;
@@ -444,13 +360,11 @@ header {
     box-sizing: border-box !important;
 }
 
-/* Cor do Ativo */
 .btn-comprar {
     background-color: #000 !important;
     color: #fff !important;
 }
 
-/* Cor do Esgotado */
 .btn-esgotado {
     background-color: #333 !important;
     color: #fff !important;
@@ -459,15 +373,12 @@ header {
 
 .btn-comprar:hover {
     background-color: #3b1e54;
-
 }
 
 .rodape-profissional {
     background-color: #0d112b;
-    /* Cor azul escura do seu print */
     color: #fff;
     padding: 15px 0;
-    /* Diminuí de 50px para 30px para o "quadrado" ficar menor */
     margin-top: 50px;
 }
 
@@ -476,34 +387,28 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* Espalha as 4 colunas igualmente */
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 20px;
-
 }
 
 .footer-container h3 {
     color: #b59b5d;
-    /* Cor dourada */
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
 .logo-footer {
     width: 150px !important;
-    /* Ajuste esse valor para o tamanho que você preferir */
     height: auto !important;
     display: block;
     margin: 0 auto 20px auto;
-    /* Centraliza a logo e dá espaço para o texto embaixo */
 }
 
-/* Garante que o container do rodapé não estique a imagem */
 .footer-info {
     text-align: left;
-    /* Garante que o texto fique à esquerda */
     max-width: 300px;
 }
 
@@ -512,9 +417,10 @@ header {
     line-height: 1.5;
     margin-bottom: 5px;
 }
+
 .secao-cuidados {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #ebe2d3 !important;
     text-align: center;
 }
 
@@ -540,21 +446,20 @@ header {
 
 .card-cuidado {
     padding: 30px;
-    background: #fcfcfc;
+    background: #ffffff !important;
     border-radius: 10px;
-    border: 1px solid #eee;
+    border: none !important;
     transition: 0.3s;
 }
 
 .card-cuidado:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
 }
 
 .card-cuidado i {
     font-size: 30px;
     color: #b59b5d;
-    /* Dourado combinando com o footer */
     margin-bottom: 15px;
 }
 
@@ -577,35 +482,26 @@ header {
     margin-bottom: 20px;
 }
 
-/* Garante que o segundo título tenha um espaço respiro acima dele */
 .secao-cuidados .titulo-secao:nth-of-type(2) {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
 .divisor-sutil {
-    border: 0;
-    border-top: 1px solid #eee;
-    width: 50%;
-    margin: 10px auto;
-    opacity: 0.3;
+    display: none;
 }
 
 .mais-vendidos .titulo-secao {
     margin-top: 10px;
-
 }
 
 .categorias-container {
     width: 100%;
-    background-color: #fff;
-    /* Fundo branco para limpeza visual */
+    background-color: #ebe2d3 !important;
     padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-    /* Linha sutil separando do banner */
+    border-bottom: none;
     display: flex;
     justify-content: center;
-    /* Centraliza tudo */
     align-items: center;
 }
 
@@ -613,7 +509,6 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
-    /* Espaço entre as palavras */
     padding: 0;
     margin: 0;
 }
@@ -621,17 +516,13 @@ header {
 .categorias-lista li a {
     text-decoration: none;
     color: #333;
-    /* Cor neutra e elegante */
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    /* Estilo de marca de luxo */
     transition: all 0.3s ease;
-    /* Animação suave de transição */
     position: relative;
 }
 
-/* Efeito de linha surgindo ao passar o mouse */
 .categorias-lista li a::after {
     content: '';
     position: absolute;
@@ -641,25 +532,20 @@ header {
     left: 0;
     background-color: #333;
     transition: width 0.3s ease;
-    /* Animação estilo Apple */
 }
 
 .categorias-lista li a:hover::after {
     width: 100%;
-    /* A linha cresce ao passar o mouse */
 }
 
-/* Estilo para o item de destaque (opcional) */
 .destaque {
     color: #b08d57 !important;
-    /* Cor dourada para chamar atenção */
 }
 
 .img-container a {
     text-decoration: none;
     display: block;
     line-height: 0;
-    /* Remove espaços vazios embaixo da imagem */
 }
 
 .img-container img {
@@ -668,17 +554,13 @@ header {
 
 .img-container img:hover {
     transform: scale(1.05);
-    /* Efeito de zoom profissional */
 }
 
-/* Isso diminui o bloco de texto para não ficar gigante */
 .produto-info {
     max-width: 500px;
-    /* Impede que o texto espalhe muito para a direita */
     padding: 20px;
 }
 
-/* Isso diminui o título da joia */
 .produto-info h1 {
     font-size: 24px !important;
     line-height: 1.2;
@@ -691,7 +573,6 @@ header {
     margin-top: 10px;
     display: block;
 }
-
 
 .btn-whatsapp {
     font-size: 13px !important;
@@ -706,57 +587,43 @@ header {
     border-radius: 5px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
-
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Efeito ao passar o mouse */
 .btn-whatsapp:hover {
     background-color: #128c7e !important;
-    /* Escurece o verde ao passar o mouse */
     transform: scale(1.05) !important;
-    /* Dá um leve zoom profissional */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn-whatsapp i {
     font-size: 16px !important;
 }
 
-
 .preco-destaque {
     font-size: 20px !important;
-    /* Tamanho mais delicado */
     margin: 10px 0 !important;
-    /* Diminui o espaço vazio em volta */
 }
 
 .material-tag {
     display: block;
-    /* Garante que a tag fique em uma linha sozinha */
     margin-bottom: 15px !important;
-    /* Cria o espaço que você pediu para o título embaixo */
     font-size: 12px !important;
     text-transform: uppercase;
     color: #b8860b;
     letter-spacing: 1px;
 }
 
-/* Ajustes para o Carrossel */
 .swiper {
     width: 100%;
     padding: 20px 50px !important;
-    /* Espaço para as setas não ficarem em cima da foto */
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     color: #000 !important;
-    /* Cor das setas */
     top: 50% !important;
 }
 
-/* Bloquinho Vermelho do topo */
 .selo-indisponivel {
     position: absolute;
     top: 10px;
@@ -770,14 +637,7 @@ header {
     z-index: 20;
 }
 
-
-/* ============================================================
-  PARA CELULAR (DIDI PRATAS) 
-   ============================================================ */
-
 @media (max-width: 768px) {
-
-    /* 1. HEADER E LOGO */
     .header-container {
         display: flex !important;
         justify-content: space-between !important;
@@ -820,11 +680,11 @@ header {
         align-items: center !important;
     }
 
-    /* 2. CATEGORIAS */
     .categorias-container {
         overflow-x: auto !important;
         justify-content: flex-start !important;
         padding: 10px 0 !important;
+        border: none !important;
     }
 
     .categorias-lista {
@@ -837,7 +697,6 @@ header {
         font-size: 12px !important;
     }
 
-    /* 3. BANNER PRINCIPAL */
     .banner-principal {
         height: 350px !important;
         padding-left: 0 !important;
@@ -859,15 +718,12 @@ header {
         font-size: 14px !important;
     }
 
-    /* 4. TÍTULOS E SUBTÍTULOS (Ajuste de espaço para tirar o vácuo) */
     .titulo-secao,
     section h2,
     .titulo-cuidados {
         font-size: 18px !important;
         margin-top: 10px !important;
-        /* Diminuído para colar na seção anterior */
         margin-bottom: 10px !important;
-        /* Espaço sutil antes dos produtos */
         padding-bottom: 0 !important;
         text-align: center !important;
         font-weight: 700 !important;
@@ -881,16 +737,15 @@ header {
         margin-bottom: 15px !important;
     }
 
-    /* 5. VITRINE DE PRODUTOS (Carrossel Horizontal) */
     .grid-produtos {
         display: flex !important;
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
         gap: 10px !important;
-        /* Espaço entre os produtos */
         padding: 0 15px !important;
         -webkit-overflow-scrolling: touch;
+        border: none !important;
     }
 
     .grid-produtos::-webkit-scrollbar {
@@ -900,22 +755,17 @@ header {
     .card-prata {
         flex: 0 0 calc(100% / 2.3) !important;
         min-width: calc(100% / 2.3) !important;
-        /* Trava no celular */
         max-width: calc(100% / 2.3) !important;
-        /* Trava no celular */
         padding: 10px !important;
         align-items: center !important;
-        border: 2px solid #d4c5a9 !important;
+        border: none !important;
         border-radius: 10px !important;
-        padding: 10px !important;
     }
 
     .img-container {
         width: 100% !important;
         aspect-ratio: 1 / 1 !important;
-        /* Garante que seja quadrado */
         height: auto !important;
-        /* Remove qualquer altura fixa antiga */
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -925,7 +775,6 @@ header {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        /* Preenche o quadrado sem distorcer */
     }
 
     .card-prata h3 {
@@ -944,22 +793,20 @@ header {
         font-size: 11px !important;
     }
 
-    /* 6. SEÇÃO DE CUIDADOS (2 por linha) */
-
     .grid-cuidados {
         display: flex !important;
-        flex-direction: row !important; /* VOLTA PARA LINHA */
-        flex-wrap: wrap !important;    /* Permite quebrar se não couber */
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 10px !important;
+        border: none !important;
     }
 
     .card-cuidado {
-        /* Aqui define: 48% faz ficarem 2 por linha. 
-           Se quiser os 4 espremidos, use 23%, mas fica ruim de ler. */
-        flex: 0 0 calc(50% - 10px) !important; 
+        flex: 0 0 calc(50% - 10px) !important;
         min-width: auto !important;
         padding: 10px !important;
+        border: none !important;
     }
 
     .card-cuidado i {
@@ -974,7 +821,6 @@ header {
         font-size: 11px !important;
     }
 
-    /* 7. RODAPÉ */
     .rodape-profissional {
         padding: 30px 0 !important;
         text-align: center !important;
@@ -999,19 +845,14 @@ header {
         margin: 0 auto 10px auto !important;
     }
 
-    /* Ajuste para o texto de estoque ficar pequeno e discreto */
     .status-estoque {
         font-size: 9px !important;
-        /* Letra bem pequena */
         gap: 4px !important;
-        /* Aproxima o ícone do texto */
         margin-top: 5px !important;
         justify-content: center !important;
         opacity: 0.8 !important;
-        /* Deixa a cor levemente mais suave */
     }
 
-    /* Caso o ícone (bolinha ou check) também esteja grande */
     .status-estoque i {
         font-size: 8px !important;
     }
@@ -1019,33 +860,25 @@ header {
     .container-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
-        /* Cria as duas colunas iguais */
         gap: 10px !important;
-        /* Espaço entre os dois quadrados */
         padding: 10px !important;
+        border: none !important;
     }
 
-    @media (max-width: 768px) {
-
-        .btn-comprar,
-        .btn-esgotado {
-            height: 36px !important;
-            /* Altura um pouco menor no celular */
-            font-size: 11px !important;
-        }
+    .btn-comprar,
+    .btn-esgotado {
+        height: 36px !important;
+        font-size: 11px !important;
     }
-
-    /* ============================================================
-       APENAS PARA A PÁGINA DE DETALHES (PRODUTO PRINCIPAL)
-       ============================================================ */
 
     .container-detalhe {
         margin: 5px auto !important;
         padding: 10px !important;
         gap: 15px !important;
         flex-direction: column !important;
-        /* Foto em cima, texto embaixo no celular */
         max-width: 95% !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
     .produto-imagem-foco {
@@ -1056,14 +889,12 @@ header {
 
     .produto-imagem-foco img {
         max-height: 380px !important;
-        /* Evita que a foto fique gigante no celular */
         width: 100% !important;
         object-fit: contain !important;
     }
 
     .produto-info {
         text-align: center !important;
-        /* Título e preço centralizados no celular */
         padding: 0 !important;
     }
 
@@ -1080,27 +911,23 @@ header {
     .descricao {
         font-size: 0.85rem !important;
         text-align: left !important;
-        /* Descrição alinhada para leitura */
         margin-bottom: 20px !important;
     }
 
     .btn-whatsapp {
         width: 100% !important;
         padding: 15px !important;
-        /* Botão grande para o polegar */
         font-size: 0.9rem !important;
     }
 
-    /* Ajuste para a seção de Semelhantes não ficar colada */
     .secao-semelhantes {
         margin-top: 30px !important;
         padding: 0 10px !important;
+        border: none !important;
     }
 
     .titulo-semelhantes {
         font-size: 1.1rem !important;
         margin-bottom: 15px !important;
     }
-
-
 }
