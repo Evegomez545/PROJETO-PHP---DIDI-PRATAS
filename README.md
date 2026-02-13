@@ -1,6 +1,8 @@
 💍 Didi Pratas - E-commerce PHP
 O Didi Pratas é um sistema de gerenciamento de vendas e catálogo online desenvolvido em PHP. A aplicação permite a visualização de produtos (joias em prata), detalhes técnicos, gestão de carrinho de compras e um painel administrativo para controle do inventário.
 
+
+
 🛠 Tecnologias
 Linguagem: PHP 8.x.
 
@@ -20,6 +22,7 @@ Sistema de Login: Controle de acesso para administradores (login.php, logout.php
 Detalhes do Produto: Página específica para visualização detalhada de cada joia.
 
 Busca e Filtros: Localização rápida de itens no inventário.
+
 
 
 📂 Estrutura de Arquivos Principal
