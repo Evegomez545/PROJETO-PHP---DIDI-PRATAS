@@ -31,4 +31,8 @@ produto-detalhes.php: Interface de exibição individual de produtos.
 
 styles.css: Identidade visual do projeto.
 
+## 🌐 Link do Projeto
+O site está online e pode ser acessado através do link abaixo:
+https://didipratas.infinityfreeapp.com/index.php?i=1
+
 Desenvolvido por Eve Gomez
